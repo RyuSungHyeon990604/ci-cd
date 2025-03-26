@@ -16,7 +16,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: Korean
           MODEL: gpt-4o
-          temperature: 0.7
           PROMPT: |
             Please review the following code diff as a senior Java developer.
             Focus on:
@@ -26,5 +25,3 @@ jobs:
             - Violations of SOLID or clean code principles
             Return your review in Korean, and suggest improvements with clear explanations.
           max_tokens: 8000
-          IGNORE_PATTERNS: '*.md,*.json'
-          INCLUDE_PATTERNS: '*.java'
