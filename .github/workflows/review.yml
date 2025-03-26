@@ -15,7 +15,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: Korean
-          MODEL: gpt-4
+          MODEL: gpt-4o
           temperature: 0.7
           PROMPT: |
             Please review the following code diff as a senior Java developer.

@@ -13,7 +13,8 @@ public class MyController {
         int a = 1;
         int b = 0;
         int c = a / b; // 0으로 나누기 위험
+        int d = a / b; // 0으로 나누기 위험
 
-        return c;
+        return d;
     }
 }
