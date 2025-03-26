@@ -5,7 +5,7 @@ permissions:
 
 on:
   pull_request:
-    branches: [ "main" ]
+    types: [opened, synchronize]
 
 jobs:
   review:
@@ -16,13 +16,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: Korean
-          MODEL: gpt-4o
-          PROMPT: |
-            Please review the following code diff as a senior Java developer.
-            Focus on:
-            - Potential bugs or logical issues
-            - Code readability and maintainability
-            - Naming conventions
-            - Violations of SOLID or clean code principles
-            Return your review in Korean, and suggest improvements with clear explanations.
-          max_tokens: 8000
+          MODEL: gpt-3.5-turbo
