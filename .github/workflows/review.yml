@@ -17,6 +17,7 @@ jobs:
           LANGUAGE: Korean
           MODEL: gpt-4
           temperature: 0.7
+          prompt: Please check if there are any confusions or irregularities in the following code diff
           max_tokens: 8000
           IGNORE_PATTERNS: '*.md,*.json'
           INCLUDE_PATTERNS: '*.java'
