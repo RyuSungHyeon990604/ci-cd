@@ -24,4 +24,4 @@ jobs:
             - Clean Code / SOLID 원칙 위반
             문제가 없다고 판단되면 그 이유도 함께 서술하세요.
           LANGUAGE: Korean
-          MODEL: gpt-4o
+          MODEL: gpt-3.5-turbo
