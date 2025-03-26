@@ -9,6 +9,11 @@ public class CiCdTestApplication {
     public static void main(String[] args) {
         //이렇게 해보자
         System.out.println("gooood?");
+        System.out.println("gooood?");
+        System.out.println("gooood?");
+        System.out.println("gooood?");
+        System.out.println("gooood?");
+        System.out.println("gooood?");
     }
 
 }
