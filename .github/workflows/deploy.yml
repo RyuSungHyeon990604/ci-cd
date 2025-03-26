@@ -29,4 +29,4 @@ jobs:
        with:
          context: .
          push: true
-         tags: user/ryu-actions-app:latest
+         tags: ${{ vars.DOCKERHUB_USERNAME }}/ryu-actions-app:latest
