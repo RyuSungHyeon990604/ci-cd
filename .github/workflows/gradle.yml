@@ -1,5 +1,8 @@
 name: Java CI with Gradle
 
+permissions:
+  contents: read
+
 on:
   push:
     branches: [ "main" ]
@@ -7,11 +10,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest # 우분투 최신 버전에서
-    permissions:
-      contents: read # 읽기전용으로
 
     steps:
     - uses: actions/checkout@v4 # 현재 브랜치의 코드를 actions 서버에 올리기
@@ -26,4 +26,19 @@ jobs:
     #  uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0 커밋해시로 gradlew 선택
 
     - name: Build with Gradle Wrapper
-      run: chmod +x ./gradlew && ./gradlew build
+      run: chmod +x ./gradlew && ./gradlew test
+
+  review:
+    runs-on: ubuntu-latest # 우분투 최신 버전에서
+    steps:
+     - uses: anc95/ChatGPT-CodeReview@main
+       env:
+         GITHUB_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
+         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+         LANGUAGE: Korean
+         MODEL: gpt-4
+         temperature: 0.7
+         max_tokens: 8000
+         IGNORE_PATTERNS: '*.md,*.json'
+         INCLUDE_PATTERNS: '*.java'
+

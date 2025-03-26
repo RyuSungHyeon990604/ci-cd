@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CiCdTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CiCdTestApplication.class, args);
+        //이렇게 해보자
+        System.out.println("gooood?");
     }
 
 }
