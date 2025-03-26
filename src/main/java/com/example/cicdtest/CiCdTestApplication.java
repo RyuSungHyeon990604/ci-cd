@@ -8,12 +8,23 @@ public class CiCdTestApplication {
 
     public static void main(String[] args) {
         //이렇게 해보자
-        System.out.println("gooood?");
-        System.out.println("gooood?");
-        System.out.println("gooood?");
-        System.out.println("gooood?");
-        System.out.println("gooood?");
-        System.out.println("gooood?");
+        int sum = 0;
+        for (int i = 0 ; i < 1000 ; i++){
+            sum+=i;
+        }
+
+        for (int i = 0 ; i < 1000 ; i++){
+            sum+=i;
+        }
+
+        for (int i = 0 ; i < 1000 ; i++){
+            sum+=i;
+        }
+
+        for (int i = 0 ; i < 1000 ; i++){
+            sum+=i;
+        }
+
     }
 
 }
